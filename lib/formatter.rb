@@ -8,8 +8,6 @@ class TimeFormatter
     'second' => '%S'
   }.freeze
 
-  attr_reader :unknown_format
-
   def initialize(request_params)
     @formatted_time = request_params
     @unknown_format = []
