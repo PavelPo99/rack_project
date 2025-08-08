@@ -1,4 +1,7 @@
 require 'rack'
 require_relative 'app'
 
-run App.new
+use Rack::ContentType
+
+app = Rack::URLMap.new "/time" => App.new
+run app
